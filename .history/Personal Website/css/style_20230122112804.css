@@ -1,0 +1,98 @@
+/*  Google fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/*  Global CSS  */
+:root
+{
+    --main-color: #00a78e;
+    --shadow-black-100:0 5px 15px rgba(0,0,0,0.2);
+    --black-900: #000;
+    --black-400: #646f87;
+    --black-100: #f7f7f7;
+    --white: #fff;
+    --black-alpha-100: rgba(0,0,0,.5);
+}
+body {
+    font-family: "Kaushan Script", cursive;
+    font-size: 16px;
+    font-weight: normal;
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+/* Navbar */
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: crimson;
+    padding: 25px;
+}
+.navbar .logo a {
+    font-size: 24px;
+    color: var(--black-900);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.navbar .logo a span {
+    color: var(--main-color);
+}
+.navbar .menu .nav-item {
+    display: inline-block;
+    position: relative;
+    margin-left: 36px;
+}
+.navbar .menu .nav-item .nav-link {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+.navbar .nav-item .nav-link span {
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+    opacity: 0;
+    visibility: hidden;
+}
+.navbar .nav-item .nav-link span::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    left: 110%;
+}
+.navbar .nav-item .nav-link span::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    left: 140%;
+}
+.navbar .nav-item > .nav-link.active span,.navbar .nav-item:hover 
